@@ -1,108 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meal Finder</title>
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+<link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
 
-  <!-- Navbar -->
+<nav>
+<div class="logo">
+<i class="fa-solid fa-utensils" style="color: rgb(255, 255, 255);"></i>
 
-  <nav>
+MEAL FINDER
+</div>
 
-    <div class="logo">
-      <i class="fa-solid fa-utensils"></i>
-      <span>MEAL FINDER</span>
-    </div>
-
-    <div class="menu">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-
-  </nav>
+<div class="menu-btn" onclick="openMenu()">
+<i class="fas fa-bars"></i>
+</div>
+</nav>
 
 
-  <!-- Hero Section -->
+ <div id="sideMenu" class="side-menu" >
 
-  <section class="hero">
+<a href="javascript:void(0)"
+class="close-btn"
+onclick="closeMenu()">&times;</a>
 
-    <div class="overlay">
+<a href="#" onclick="searchMealsByCategory('Beef')">Beef</a>
 
-      <div class="search-box">
+<a href="#" onclick="searchMealsByCategory('Chicken')">Chicken</a>
 
-        <input type="text" id="searchInput" placeholder="Search Recipes Here">
+<a href="#" onclick="searchMealsByCategory('Dessert')">Dessert</a>
 
-        <button id="searchBtn">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+<a href="#" onclick="searchMealsByCategory('Lamb')">Lamb</a>
 
-      </div>
+<a href="#" onclick="searchMealsByCategory('Miscellaneous')">Miscellaneous</a>
 
-      <h1>What are your favorite cuisines?</h1>
+<a href="#" onclick="searchMealsByCategory('Pasta')">Pasta</a>
 
-      <p>PERSONALIZE YOUR EXPERIENCE</p>
+<a href="#" onclick="searchMealsByCategory('Seafood')">Seafood</a>
 
-    </div>
+<a href="#" onclick="searchMealsByCategory('Vegetarian')">Vegetarian</a>
 
-  </section>
+<a href="#" onclick="searchMealsByCategory('Breakfast')">Breakfast</a>
+
+<a href="#" onclick="searchMealsByCategory('Goat')">Goat</a>
 
 
-  <!-- Categories -->
+</div>
 
-  <section class="categories">
+</div>
 
+<section class="hero">
+
+<div class="overlay">
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search recipes here...">
+
+<button onclick="searchMeals()">
+<i class="fas fa-search"></i>
+</button>
+
+</div>
+
+<h1>What are your favorite cuisines?</h1>
+<p>PERSONALIZE YOUR EXPERIENCE</p>
+
+</div>
+
+</section>
+
+<section class="results">
     <h2>CATEGORIES</h2>
+<div id="mealContainer"></div>
+</section>
 
-    <div id="categoryContainer" class="cards">
+<section class="details">
 
-    </div>
+<h2>MEAL DETAILS</h2>
 
-  </section>
+<div id="mealDetails"></div>
 
+</section>
 
-  <!-- Search Result -->
+<script src="script.js"></script>
 
-  <section>
-
-    <div id="mealContainer" class="cards">
-
-    </div>
-
-  </section>
-
-
-  <!-- Popup -->
-
-  <div id="popup" class="popup">
-
-    <div class="popup-content">
-
-      <span id="close">&times;</span>
-
-      <div id="mealDetails"></div>
-
-    </div>
-
-  </div>
-
-  <script src="script.js"></script>
 
 </body>
-
-</html>
-
-</body>
-
 </html>
