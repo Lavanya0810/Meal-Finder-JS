@@ -9,8 +9,8 @@
 </head>
 <body>
     <nav>
-        <div class="logo">
-            <i class="fas fa-home"></i>
+        <div class="logo" onclick="goHome()" style="cursor:pointer;">
+            <i class="fa-solid fa-utensils" style="color:rgb(255,255,255);"></i>
             MEAL FINDER
          </div>
 
@@ -36,7 +36,7 @@
         <a href="#" onclick="searchMealsByCategory('Goat')">Goat</a>
 
      </div>
-     </div>
+     
 
      <section class="hero">
         <div class="overlay">
@@ -54,16 +54,23 @@
         <p>PERSONALIZE YOUR EXPERIENCE</p>
          </div>
           </section>
+          
           <section class="results">
-            <h2>CATEGORIES</h2>
-            <div id="mealContainer"></div>
-        </section>
+    <div id="mealSection"></div>
+ <div id="categorySection">
+        <h2>CATEGORIES</h2>
+        <div id="categoryContainer"></div>
+    </div>
+     
+</section>
 
-        <section class="details">
-            <h2>MEAL DETAILS</h2>
-            <div id="mealDetails"></div>
-        </section>
-        <script src="Script.js"></script>
+<section class="details" id="detailsSection">
+
+    <div id="mealDetails"></div>
+
+</section>
+
+<script src="Script.js"></script>
     
 </body>
 </html>
