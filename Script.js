@@ -69,8 +69,7 @@ async function showMeal(id) {
   document.getElementById("detailsSection").style.display = "block";
 
   let res = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
-  );
+    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
 
   let data = await res.json();
   let meal = data.meals[0];
@@ -83,8 +82,7 @@ async function showMeal(id) {
     let measure = meal[`strMeasure${i}`];
 
     if (item && item.trim() !== "") {
-      ingredients += `<li>${measure} ${item}</li>`;
-    }
+      ingredients += `<li>${measure} ${item}</li>`;}
   }
 
   // Instructions

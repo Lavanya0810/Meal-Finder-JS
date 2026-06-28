@@ -1,76 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MEAL FINDER</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
-    <nav>
-        <div class="logo" onclick="goHome()" style="cursor:pointer;">
-            <i class="fa-solid fa-utensils" style="color:rgb(255,255,255);"></i>
-            MEAL FINDER
-         </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="stylesheet.css" />
+    </head>
+    <body>
 
-         <div class="menu-btn" onclick="openMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
+    <nav>
+      <div class="logo" onclick="goHome()" style="cursor: pointer">
+        <i class="fa-solid fa-utensils" style="color: rgb(255, 255, 255); padding-left: 80px"></i>
+        MEAL FINDER
+      </div>
+
+      <div class="menu-btn" onclick="openMenu()">
+        <i class="fas fa-bars" style="padding-right: 100px"></i>
+      </div>
     </nav>
 
     <div id="sideMenu" class="side-menu">
-        <a href="javascript:void(0)" 
-        class="close-btn" 
-        onclick="closeMenu()">&times;</a>
+      <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
 
-        <a href="#" onclick="searchMealsByCategory('Beef')">Beef</a>
-        <a href="#" onclick="searchMealsByCategory('Chicken')">Chicken</a>
-        <a href="#" onclick="searchMealsByCategory('Dessert')">Dessert</a>
-        <a href="#" onclick="searchMealsByCategory('Lamb')">Lamb</a>
-        <a href="#" onclick="searchMealsByCategory('Miscellaneous')">Miscellaneous</a>
-        <a href="#" onclick="searchMealsByCategory('Pasta')">Pasta</a>
-        <a href="#" onclick="searchMealsByCategory('Seafood')">Seafood</a>
-        <a href="#" onclick="searchMealsByCategory('Vegetarian')">Vegetarian</a>
-        <a href="#" onclick="searchMealsByCategory('Breakfast')">Breakfast</a>
-        <a href="#" onclick="searchMealsByCategory('Goat')">Goat</a>
+      <a href="#" onclick="searchMealsByCategory('Beef')">Beef</a>
+      <a href="#" onclick="searchMealsByCategory('Chicken')">Chicken</a>
+      <a href="#" onclick="searchMealsByCategory('Dessert')">Dessert</a>
+      <a href="#" onclick="searchMealsByCategory('Lamb')">Lamb</a>
+      <a href="#" onclick="searchMealsByCategory('Miscellaneous')">Miscellaneous</a>
+      <a href="#" onclick="searchMealsByCategory('Pasta')">Pasta</a>
+      <a href="#" onclick="searchMealsByCategory('Pork')">Pork</a>
+      <a href="#" onclick="searchMealsByCategory('Seafood')">Seafood</a>
+      <a href="#" onclick="searchMealsByCategory('Side')">Side</a>
+      <a href="#" onclick="searchMealsByCategory('starter')">Starter</a>
+      <a href="#" onclick="searchMealsByCategory('Vegan')">Vegan</a>
+      <a href="#" onclick="searchMealsByCategory('Vegetarian')">Vegetarian</a>
+      <a href="#" onclick="searchMealsByCategory('Breakfast')">Breakfast</a>
+      <a href="#" onclick="searchMealsByCategory('Goat')">Goat</a>
+    </div>
 
-     </div>
-     
-
-     <section class="hero">
-        <div class="overlay">
+    <section class="hero">
+      <div class="overlay">
         <div class="search-box">
-            <input type="text"
+          <input
+            type="text"
             id="searchInput"
-            placeholder="Search recepies here...">
+            placeholder="Search recepies here..."/>
 
-            <button onclick="searchMeals()">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
-        
-        <h1>What are you favorite cuisines?</h1>
-        <p>PERSONALIZE YOUR EXPERIENCE</p>
-         </div>
-          </section>
-          
-          <section class="results">
-    <div id="mealSection"></div>
- <div id="categorySection">
+           <button onclick="searchMeals()">
+            <i class="fas fa-search"></i>
+           </button>
+            </div>
+
+           <h1>What are you favorite cuisines?</h1>
+           <p>PERSONALIZE YOUR EXPERIENCE</p>
+           </div>
+      </section>
+
+     <section class="results">
+      <div id="mealSection"></div>
+      <div id="categorySection">
         <h2>CATEGORIES</h2>
         <div id="categoryContainer"></div>
-    </div>
-     
-</section>
+      </div>
+      </section>
 
-<section class="details" id="detailsSection">
+      <section class="details" id="detailsSection">
+      <div id="mealDetails"></div>
+      </section>
 
-    <div id="mealDetails"></div>
-
-</section>
-
-<script src="Script.js"></script>
-    
-</body>
+    <script src="Script.js"></script>
+  </body>
 </html>
